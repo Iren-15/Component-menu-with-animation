@@ -1,0 +1,394 @@
+body {
+  background-color: white;
+}
+
+p,
+a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.par {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.par-data {
+  margin-right: 5px;
+}
+
+.margin-r-20 {
+  margin-right: 20px;
+}
+
+.par-deployed {
+  background-color: rgba(62, 59, 59, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0px 10px 5px 10px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.green {
+  color: rgb(48, 188, 48);
+}
+
+.white {
+  color: white;
+}
+
+.container-main {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.component-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  color: rgb(105, 96, 96);
+  border: none;
+  border-radius: 10px;
+  padding: 7px;
+  margin: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button {
+  background: transparent;
+}
+
+.buttons {
+  position: relative;
+  z-index: 1;
+}
+
+.active-btn-indicator {
+  position: absolute;
+  opacity: 0.4;
+  border-radius: 10px;
+  margin: 7px 0px 7px 0px;
+  background-color: rgb(211, 202, 202);
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+.btn-container {
+  position: relative;
+}
+
+.container-center {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-billing,
+.btn-pro {
+  color: #f4ff26;
+  background-color: rgba(62, 59, 59, 0.5);
+}
+
+.btn-analytics-full {
+  color: #12ecfa;
+  background-color: rgba(62, 59, 59, 0.5);
+}
+
+.btn-details,
+.btn-close-commit-page,
+.btn-close-analytics-page,
+.btn-close-upgrade-page,
+.btn-see-pro,
+.btn-plans,
+.btn-redeploy {
+  background-color: rgba(62, 59, 59, 0.5);
+}
+
+.btn-select-pro {
+  background-color: #f4ff26;
+  color: rgb(58, 56, 56);
+}
+
+.btn-select-pro,
+.btn-plans {
+  flex: 1;
+}
+
+.container {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 0;
+}
+
+.container-item {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  margin: 0;
+  padding: 5px 0px 5px 5px;
+}
+
+.container-data {
+  display: flex;
+  margin: 0px 10px 0px 0px 0px;
+}
+
+.container-row {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.content-between {
+  justify-content: space-between;
+}
+
+.container-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.icon-green {
+  background-color: rgb(48, 188, 48);
+}
+
+.icon-red {
+  background-color: red;
+}
+
+.icon-yellow {
+  background-color: #f4ff26;
+}
+
+.item-projects,
+.item-groups,
+.item-orders,
+.item-templates {
+  transition: 0.5s ease;
+}
+
+.item-projects:hover,
+.item-groups:hover,
+.item-orders:hover,
+.item-templates:hover {
+  transition: 0.5s ease;
+  background-color: rgba(62, 59, 59, 0.5);
+  border-radius: 10px;
+  padding: 0px 15px 0px 15px;
+  cursor: pointer;
+}
+
+.commit-page {
+  display: none;
+}
+
+.upgrade-page {
+  display: none;
+}
+
+.success-full-page {
+  display: none;
+}
+
+.analytics-page {
+  display: none;
+}
+
+.analytics-full-page {
+  display: none;
+}
+
+.analytics-close-item {
+  display: none;
+}
+
+.upgrade-full-page {
+  display: none;
+}
+
+.billing-page-item {
+  display: none;
+}
+
+.par-online-now {
+  margin-right: 0;
+}
+
+.close {
+  visibility: hidden;
+  display: none;
+  transition: all 0s allow-discrete;
+}
+
+.open {
+  height: 100%;
+  visibility: visible;
+  display: flex;
+  transform: scale(1);
+  transition: height 0.3s, visibility 0.3s, transform 0.3s, overlay 0.3s,
+    display 0.3s allow-discrete;
+  animation: hitEffect 0.3s ease-in-out;
+}
+
+.open-to-top {
+  display: block;
+  transition: overlay 0.5s, all 0.5s allow-discrete;
+  animation: openTopEffect 0.3s linear forwards;
+}
+
+.close-from-top {
+  transition: overlay 0.1s, all 0.1s allow-discrete;
+  animation: closeFromTopEffect 0.1s;
+  display: none;
+}
+
+.open-to-top-commit {
+  display: block;
+  transition: overlay 0.2s, all 0.2s allow-discrete;
+  animation: openTopCommitEffect 0.2s linear forwards;
+}
+
+.close-from-top-commit {
+  transition: overlay 0.1s, all 0.1s allow-discrete;
+  animation: closeFromTopCommitEffect 0.1s;
+  display: none;
+}
+
+.item-success-open {
+  display: flex;
+  transition: overlay 0.5s, all 0.5s allow-discrete;
+  animation: openLeftEffect 0.3s linear forwards;
+}
+
+.item-success-close {
+  transition: display 0s allow-discrete;
+  display: none;
+}
+
+.item-upgrade-open {
+  display: flex;
+  transition: overlay 0.5s, all 0.5s allow-discrete;
+  animation: openLeftEffect 0.5s linear forwards;
+  animation: hitEffect 0.3s ease-in-out;
+}
+
+.item-upgrade-close {
+  transition: display 0s allow-discrete;
+  animation: hitEffect 0.3s ease-in-out;
+  display: none;
+}
+
+.left-effect {
+  animation: openLeftEffect 0.3s linear forwards;
+}
+
+@keyframes hitEffect {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.01);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes openTopEffect {
+  0% {
+    max-height: 0;
+    padding: 5px 15px 5px 15px;
+    margin: 0;
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    max-height: auto;
+    margin: 5px;
+    padding: 5px 5px 5px 5px;
+    visibility: visible;
+  }
+}
+
+@keyframes closeFromTopEffect {
+  from {
+    max-height: 100%;
+    visibility: visible;
+  }
+  to {
+    max-height: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes openLeftEffect {
+  0% {
+    max-width: auto;
+    margin-right: -50px;
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    max-width: auto;
+    margin-right: 10px;
+    visibility: visible;
+  }
+}
+
+@keyframes openTopCommitEffect {
+  0% {
+    max-height: 0;
+    padding: 5px 15px 5px 15px;
+    margin: 0;
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    max-height: 100%;
+    margin: 5px;
+    padding: 5px 5px 5px 5px;
+    visibility: visible;
+  }
+}
+
+@keyframes closeFromTopCommitEffect {
+  100% {
+    max-height: 100%;
+    visibility: visible;
+  }
+  50% {
+  }
+  0% {
+    max-height: 0;
+    visibility: hidden;
+  }
+}
